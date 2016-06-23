@@ -33,8 +33,10 @@ file(GLOB ns_src ./ns/*.cc)
 include_directories(./transient)
 file(GLOB transient_src ./transient/*.cc)
 
-include_direcotries(./utility)
-file(GLOB utility_src ./utility/*.cc)
+include_directories(./utility/interface)
+include_directories(./utility/interface/mock)
+include_directories(./utility/source)
+file(GLOB utility_src ./utility/source/*.cc)
 
 include_directories(./vad)
 file(GLOB vad_src ./vad/*.cc)

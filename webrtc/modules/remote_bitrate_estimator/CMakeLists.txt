@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 2.6)
-project(video)
+project(remote_bitrate_estimator)
 
 include_directories(./)
-file(GLOG lib_src ./*.cc)
+include_directories(./include)
+include_directories(./tools)
+file(GLOB lib_src ./*.cc ./tools/*.cc)
 
-add_library(${CMAKE_PROJECT_NAME} STATIC ${lib_src})
+add_library(remote_bitrate_estimator STATIC ${lib_src})

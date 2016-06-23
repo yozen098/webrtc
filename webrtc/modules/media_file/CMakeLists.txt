@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 2.6)
-project(video)
+project(media_file)
 
-include_directories(./)
-file(GLOG lib_src ./*.cc)
+include_directories(./interface)
+include_directories(./source)
+file(GLOB lib_src ./source/*.cc)
 
-add_library(${CMAKE_PROJECT_NAME} STATIC ${lib_src})
+add_library(media_file STATIC ${lib_src})

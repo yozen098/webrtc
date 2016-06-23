@@ -14,6 +14,6 @@ add_subdirectory(./rtp_rtcp)
 add_subdirectory(./utility)
 add_subdirectory(./video_capture)
 add_subdirectory(./video_coding)
-add_subdirectory(./video_processing)
-add_subdirectory(./video_render)
+#add_subdirectory(./video_processing)
+#add_subdirectory(./video_render)
 

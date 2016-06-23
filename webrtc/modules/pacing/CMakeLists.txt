@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 2.6)
-project(video)
+project(pacing)
 
 include_directories(./)
-file(GLOG lib_src ./*.cc)
+include_directories(./include)
+file(GLOB lib_src ./*.cc)
 
-add_library(${CMAKE_PROJECT_NAME} STATIC ${lib_src})
+add_library(pacing STATIC ${lib_src})

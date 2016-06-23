@@ -95,8 +95,10 @@ class IsRefCounted {
   // over the other if it is possible to create it without compiler errors,
   // otherwise the compiler will simply remove it, and default to the less
   // preferred function.
+  /*
   template <typename R>
   static Yes test(R* r, decltype(r->AddRef(), r->Release(), 42));
+  */
   template <typename C> static No test(...);
 
 public:
