@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include "talk/app/webrtc/datachannel.h"
 #include "talk/app/webrtc/sctputils.h"
 #include "talk/app/webrtc/test/fakedatachannelprovider.h"
@@ -506,3 +506,4 @@ TEST_F(SctpDataChannelTest, NeverOpened) {
   webrtc_data_channel_->OnTransportChannelCreated();
   webrtc_data_channel_->Close();
 }
+#endif //UT

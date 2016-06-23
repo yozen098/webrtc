@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include <string>
 #include <vector>
 
@@ -1344,3 +1344,4 @@ TEST_F(MediaStreamSignalingTest, DataChannelFromOpenMessageAddedOnce) {
   signaling_->RemoveSctpDataChannel(config.id);
   EXPECT_FALSE(signaling_->HasDataChannels());
 }
+#endif //UT

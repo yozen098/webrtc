@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include <string>
 
 #include "talk/app/webrtc/audiotrack.h"
@@ -161,3 +161,4 @@ TEST_F(MediaStreamTest, ChangeAudioTrack) {
 }
 
 }  // namespace webrtc
+#endif //UT

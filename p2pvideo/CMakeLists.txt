@@ -23,8 +23,7 @@ add_definitions(
 	-DSSL_USE_SCHANNEL
 	-DWEBRTC_LOGGING=1
 )
-
 add_executable(p2pvideo_example webrtc_streamer.cc)
-target_link_libraries(p2pvideo_example p2pvideo ${PLATFORM_SPECIFIC_DEFINITIONS})
+target_link_libraries(p2pvideo_example p2pvideo base talk_app)
 
 

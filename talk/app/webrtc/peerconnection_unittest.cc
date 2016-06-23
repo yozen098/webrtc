@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include <stdio.h>
 
 #include <algorithm>
@@ -1627,3 +1627,4 @@ TEST_F(JsepPeerConnectionP2PTestClient,
 }
 
 #endif // if !defined(THREAD_SANITIZER)
+#endif //UT

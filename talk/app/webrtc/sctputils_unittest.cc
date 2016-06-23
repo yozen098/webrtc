@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include "talk/app/webrtc/sctputils.h"
 #include "webrtc/base/bytebuffer.h"
 #include "webrtc/base/gunit.h"
@@ -159,3 +159,4 @@ TEST_F(SctpUtilsTest, WriteParseAckMessage) {
 
   EXPECT_TRUE(webrtc::ParseDataChannelOpenAckMessage(packet));
 }
+#endif //UT

@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include "talk/app/webrtc/proxy.h"
 
 #include <string>
@@ -168,3 +168,4 @@ TEST_F(ProxyTest, Method2) {
 }
 
 }  // namespace webrtc
+#endif //UT

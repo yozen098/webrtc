@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include "talk/app/webrtc/dtmfsender.h"
 
 #include <set>
@@ -357,3 +357,4 @@ TEST_F(DtmfSenderTest, InsertDtmfWithInvalidDurationOrGap) {
 
   EXPECT_TRUE(dtmf_->InsertDtmf(tones, duration, inter_tone_gap));
 }
+#endif //UT

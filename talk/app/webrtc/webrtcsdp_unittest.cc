@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include <set>
 #include <string>
 #include <vector>
@@ -2671,3 +2671,4 @@ TEST_F(WebRtcSdpTest, MediaContentOrderMaintainedRoundTrip) {
     EXPECT_EQ(sdp_string, serialized_sdp);
   }
 }
+#endif //UT

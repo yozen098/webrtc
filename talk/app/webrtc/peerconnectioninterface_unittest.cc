@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include <string>
 
 #include "talk/app/webrtc/fakeportallocatorfactory.h"
@@ -1225,3 +1225,4 @@ TEST_F(PeerConnectionInterfaceTest, CloseAndGetStats) {
   pc_->Close();
   DoGetStats(NULL);
 }
+#endif //UT

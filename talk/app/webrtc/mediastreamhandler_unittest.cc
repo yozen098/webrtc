@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include "talk/app/webrtc/mediastreamhandler.h"
 
 #include <string>
@@ -323,3 +323,4 @@ TEST_F(MediaStreamHandlerTest, RemoteAudioTrackSetVolume) {
 }
 
 }  // namespace webrtc
+#endif //UT

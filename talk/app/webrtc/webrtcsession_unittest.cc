@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include "talk/app/webrtc/audiotrack.h"
 #include "talk/app/webrtc/fakemetricsobserver.h"
 #include "talk/app/webrtc/jsepicecandidate.h"
@@ -3944,3 +3944,4 @@ TEST_F(WebRtcSessionTest, CreateOffersAndShutdown) {
 INSTANTIATE_TEST_CASE_P(
     WebRtcSessionTests, WebRtcSessionTest,
     testing::Values(ALREADY_GENERATED, DTLS_IDENTITY_STORE));
+#endif //UT

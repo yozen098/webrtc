@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include "talk/app/webrtc/test/peerconnectiontestwrapper.h"
 #include "talk/app/webrtc/test/mockpeerconnectionobservers.h"
 #include "webrtc/base/gunit.h"
@@ -364,3 +364,4 @@ TEST_F(PeerConnectionEndToEndTest,
   EXPECT_EQ(1U, dc_1_observer->received_message_count());
   EXPECT_EQ(1U, dc_2_observer->received_message_count());
 }
+#endif //UT

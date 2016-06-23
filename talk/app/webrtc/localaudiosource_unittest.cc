@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include "talk/app/webrtc/localaudiosource.h"
 
 #include <string>
@@ -132,3 +132,4 @@ TEST(LocalAudioSourceTest, InvalidMandatory) {
   EXPECT_TRUE(source->options().highpass_filter.Get(&value));
   EXPECT_FALSE(value);
 }
+#endif //UT

@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include <string>
 
 #include "talk/app/webrtc/jsepicecandidate.h"
@@ -243,3 +243,4 @@ TEST_F(JsepSessionDescriptionTest, SerializeDeserializeWithCandidates) {
 
   EXPECT_EQ(sdp_with_candidate, parsed_sdp_with_candidate);
 }
+#endif //UT
