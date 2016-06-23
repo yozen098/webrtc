@@ -10,7 +10,7 @@
 
 #ifndef WEBRTC_BASE_TESTUTILS_H__
 #define WEBRTC_BASE_TESTUTILS_H__
-
+#if defined(UNIT_TEST)
 // Utilities for testing rtc infrastructure in unittests
 
 #if defined(WEBRTC_LINUX) && !defined(WEBRTC_ANDROID)
@@ -626,5 +626,5 @@ inline bool IsScreencastingAvailable() {
   return true;
 }
 }  // namespace testing
-
+#endif // UNIT_TEST
 #endif  // WEBRTC_BASE_TESTUTILS_H__

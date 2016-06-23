@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(WEBRTC_WIN)
 #include "webrtc/base/winping.h"
 
 #include <assert.h>
@@ -358,3 +358,4 @@ WinPing::PingResult WinPing::Ping(
 //////////////////////////////////////////////////////////////////////
 
 } // namespace rtc
+#endif //WEBRTC_WIN
