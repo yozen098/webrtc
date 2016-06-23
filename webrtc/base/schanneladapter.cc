@@ -7,11 +7,11 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(SSL_USE_SCHANNEL)
 #include "webrtc/base/win32.h"
 #define SECURITY_WIN32
-#include <security.h>
-#include <schannel.h>
+//#include <security.h>
+//#include <schannel.h>
 
 #include <algorithm>
 #include <iomanip>
@@ -712,3 +712,4 @@ SChannelAdapter::OnMessage(Message* pmsg) {
 }
 
 } // namespace rtc
+#endif //SSL_USE_SCHANNEL

@@ -162,7 +162,8 @@ struct DefaultDeleter<T[]> {
 template <class T, int n>
 struct DefaultDeleter<T[n]> {
   // Never allow someone to declare something like scoped_ptr<int[10]>.
-  static_assert(sizeof(T) == -1, "do not use array with size as type");
+  //static_assert(sizeof(T) == -1, "do not use array with size as type");
+
 };
 
 // Function object which invokes 'free' on its parameter, which must be

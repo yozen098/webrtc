@@ -12,7 +12,7 @@
 
 #ifndef WEBRTC_BASE_SEC_BUFFER_H__
 #define WEBRTC_BASE_SEC_BUFFER_H__
-
+#if defined(WEBRTC_WIN)
 namespace rtc {
 
 // A base class for CSecBuffer<T>. Contains
@@ -152,5 +152,5 @@ class CSecBufferBundle : public SecBufferBundleBase {
 };
 
 } // namespace rtc
-
+#endif //WEBRTC_WIN
 #endif  // WEBRTC_BASE_SEC_BUFFER_H__

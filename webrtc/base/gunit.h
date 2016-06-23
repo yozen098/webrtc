@@ -16,7 +16,7 @@
 #if defined(WEBRTC_ANDROID) || defined(GTEST_RELATIVE_PATH)
 #include "testing/gtest/include/gtest/gtest.h"
 #else
-#include "testing/base/public/gunit.h"
+//#include "testing/base/public/gunit.h"
 #endif
 
 // Wait until "ex" is true, or "timeout" expires.

@@ -4,4 +4,4 @@ project(base)
 include_directories(./../../)
 file(GLOB lib_src *.cc)
 
-add_library(base STATIC ${lib_src})
+add_library(base SHARED ${lib_src})
