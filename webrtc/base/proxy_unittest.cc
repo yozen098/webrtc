@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include <string>
 #include "webrtc/base/autodetectproxy.h"
 #include "webrtc/base/gunit.h"
@@ -134,3 +134,5 @@ TEST_F(ProxyTest, TestAutoDetectHttps) {
 TEST_F(ProxyTest, TestAutoDetectBogus) {
   EXPECT_EQ(rtc::PROXY_UNKNOWN, DetectProxyType(kBogusProxyIntAddr));
 }
+
+#endif //UT

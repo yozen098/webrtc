@@ -7,6 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+#if defined (UNIT_TEST)
 #include "webrtc/base/gunit.h"
 #include "webrtc/base/testutils.h"
 #include "webrtc/base/window.h"
@@ -65,3 +66,4 @@ TEST(WindowPickerTest, DISABLE_ON_MAC(GetDesktopList)) {
     EXPECT_TRUE(found_primary);
   }
 }
+#endif // UNIT_TEST

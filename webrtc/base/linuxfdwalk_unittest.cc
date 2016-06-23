@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined (UNIT_TEST)
 #include <set>
 #include <sstream>
 
@@ -73,3 +73,4 @@ TEST(LinuxFdWalk, TestFdWalk) {
   EXPECT_EQ(0, close(fd3));
   EXPECT_EQ(0, close(fd4));
 }
+#endif // UNIT_TEST

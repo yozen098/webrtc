@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined (UNIT_TEST)
 #include <string>
 
 #include "webrtc/base/fileutils_mock.h"
@@ -162,3 +162,4 @@ TEST_F(ProxyDetectTest, DISABLED_TestFirefoxProxyAutoUrl) {
 }
 
 }  // namespace rtc
+#endif //UNIT_TEST

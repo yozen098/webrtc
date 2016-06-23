@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/arraysize.h"
 #include "webrtc/base/checks.h"
 #include "webrtc/base/filerotatingstream.h"
@@ -314,3 +314,4 @@ TEST_F(CallSessionFileRotatingStreamTest, WriteAndReadFirstHalf) {
 }
 
 }  // namespace rtc
+#endif // UT

@@ -7,6 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+#if defined(UNIT_TEST)
 #include "webrtc/base/gunit.h"
 #include "webrtc/base/common.h"
 #include "webrtc/base/logging.h"
@@ -97,3 +98,4 @@ TEST(Win32WindowPickerTest, TestMoveToFront) {
 }
 
 }  // namespace rtc
+#endif // UNIT_TEST

@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/sigslot.h"
 
 #include "webrtc/base/gunit.h"
@@ -27,6 +27,7 @@ class SigslotDefault : public testing::Test, public sigslot::has_slots<> {
  protected:
   sigslot::signal0<> signal_;
 };
+
 
 template<class slot_policy = sigslot::single_threaded,
          class signal_policy = sigslot::single_threaded>
@@ -248,3 +249,4 @@ TEST(DestructionOrder, SlotFirst) {
   (*signal)();
   delete signal;
 }
+#endif // UNIT_TEST

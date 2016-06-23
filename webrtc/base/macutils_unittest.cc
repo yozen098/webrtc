@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/gunit.h"
 #include "webrtc/base/macutils.h"
 
@@ -41,3 +41,4 @@ TEST(MacUtilsTest, RunAppleScriptSuccess) {
   std::string script("set value to 5");
   EXPECT_TRUE(rtc::RunAppleScript(script));
 }
+#endif // UNIT_TEST

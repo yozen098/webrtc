@@ -9,7 +9,7 @@
  */
 
 // Unittest for registry access API
-
+#if defined(WEBRTC_WIN) && defined(UNIT_TEST)
 #include "webrtc/base/gunit.h"
 #include "webrtc/base/common.h"
 #include "webrtc/base/win32regkey.h"
@@ -595,3 +595,4 @@ TEST(RegKeyTest, RegKeyFunctionsTest) {
 }
 
 }  // namespace rtc
+#endif //WEBRTC_WIN

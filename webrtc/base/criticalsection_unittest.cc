@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include <set>
 #include <vector>
 
@@ -299,3 +299,4 @@ TEST(CriticalSectionTest, IsLocked) {
 #endif
 
 }  // namespace rtc
+#endif //UT

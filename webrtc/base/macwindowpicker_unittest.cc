@@ -7,6 +7,8 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+
+#if defined(UNIT_TEST)
 #include "webrtc/base/gunit.h"
 #include "webrtc/base/logging.h"
 #include "webrtc/base/macutils.h"
@@ -43,3 +45,4 @@ TEST(MacWindowPickerTest, TestGetWindowList) {
 // provide a pre-constructed list of windows.
 
 }  // namespace rtc
+#endif // UNIT_TEST

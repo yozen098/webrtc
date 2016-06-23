@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/asyncinvoker.h"
 #include "webrtc/base/asyncudpsocket.h"
 #include "webrtc/base/event.h"
@@ -720,3 +720,4 @@ TEST_F(ComThreadTest, ComInited) {
   delete thread;
 }
 #endif
+#endif //UT

@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include <signal.h>
 #include <stdarg.h>
 
@@ -357,3 +357,4 @@ TEST_F(PosixSignalDeliveryTest, SignalOnDifferentThread) {
 #endif
 
 }  // namespace rtc
+#endif //UT

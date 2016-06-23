@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined (UNIT_TEST)
 #include <limits.h>
 
 #include "webrtc/base/bandwidthsmoother.h"
@@ -114,3 +114,4 @@ TEST(BandwidthSmootherTest, TestSampleNegative) {
 }
 
 }  // namespace rtc
+#endif // UNIT_TEST

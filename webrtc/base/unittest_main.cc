@@ -9,7 +9,7 @@
  */
 //
 // A reuseable entry point for gunit tests.
-
+#if defined (UNIT_TEST)
 #if defined(WEBRTC_WIN)
 #include <crtdbg.h>
 #endif
@@ -105,3 +105,4 @@ int main(int argc, char** argv) {
 
   return res;
 }
+#endif //UT

@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #if defined(WEBRTC_POSIX)
 #include <sys/time.h>
 #endif  // WEBRTC_POSIX
@@ -544,3 +544,4 @@ TEST(unstarted_task_test, DoNotDeleteTask2) {
 }
 
 }  // namespace rtc
+#endif //UT

@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/gunit.h"
 #include "webrtc/base/nethelpers.h"
 #include "webrtc/base/physicalsocketserver.h"
@@ -86,3 +86,4 @@ TEST(TestClientTest, MAYBE_TestTcpIPv6) {
     LOG(LS_INFO) << "Skipping IPv6 test.";
   }
 }
+#endif //UT

@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/gunit.h"
 #include "webrtc/base/signalthread.h"
 #include "webrtc/base/thread.h"
@@ -197,3 +197,4 @@ TEST_F(SignalThreadTest, DeferredDestroyedThreadCleansUp) {
   Thread::Current()->ProcessMessages(0);
   EXPECT_STATE(1, 1, 0, 1, 1);
 }
+#endif //UNIT_TEST

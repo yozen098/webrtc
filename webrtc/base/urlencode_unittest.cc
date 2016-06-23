@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/common.h"
 #include "webrtc/base/gunit.h"
 #include "webrtc/base/thread.h"
@@ -81,3 +81,4 @@ TEST(Urldecode, Decoding2) {
   ASSERT_EQ(3, rtc::UrlDecodeWithoutEncodingSpaceAsPlus(source, dest));
   ASSERT_STREQ("A^+", dest);
 }
+#endif // UNIT_TEST

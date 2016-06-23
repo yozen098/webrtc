@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/common.h"
 #include "webrtc/base/base64.h"
 #include "webrtc/base/gunit.h"
@@ -999,3 +999,4 @@ TEST(Base64, GetNextBase64Char) {
   EXPECT_FALSE(Base64::GetNextBase64Char('&', &next_char));
   EXPECT_FALSE(Base64::GetNextBase64Char('Z', NULL));
 }
+#endif //UT

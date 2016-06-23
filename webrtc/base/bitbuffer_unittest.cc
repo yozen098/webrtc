@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/bitbuffer.h"
 #include "webrtc/base/bytebuffer.h"
 #include "webrtc/base/common.h"
@@ -307,3 +307,4 @@ TEST(BitBufferWriterTest, WriteClearsBits) {
 }
 
 }  // namespace rtc
+#endif //UT

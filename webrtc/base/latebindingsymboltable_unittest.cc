@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined (UNIT_TEST)
 #if defined(WEBRTC_LINUX) && !defined(WEBRTC_ANDROID)
 #include <math.h>
 #endif
@@ -53,3 +53,4 @@ TEST(LateBindingSymbolTable, libm) {
 #endif
 
 }  // namespace rtc
+#endif //UNIT_TEST

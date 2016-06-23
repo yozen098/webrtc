@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/basictypes.h"
 
 #include "webrtc/base/gunit.h"
@@ -82,3 +82,4 @@ TEST(BasicTypesTest, SizeOfConstants) {
 // TODO(fbarchard): Test all macros in basictypes.h
 
 }  // namespace rtc
+#endif //UNIT_TEST

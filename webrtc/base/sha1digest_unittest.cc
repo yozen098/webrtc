@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/sha1digest.h"
 #include "webrtc/base/gunit.h"
 #include "webrtc/base/stringencode.h"
@@ -80,3 +80,4 @@ TEST(Sha1DigestTest, TestBufferConst) {
 }
 
 }  // namespace rtc
+#endif // UNIT_TEST

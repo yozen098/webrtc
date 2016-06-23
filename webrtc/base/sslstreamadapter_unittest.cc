@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-
+#if defined(UNIT_TEST)
 #include <algorithm>
 #include <set>
 #include <string>
@@ -1061,3 +1061,4 @@ INSTANTIATE_TEST_CASE_P(SSLStreamAdapterTestsDTLS,
                         SSLStreamAdapterTestDTLS,
                         Combine(Values(rtc::KT_RSA, rtc::KT_ECDSA),
                                 Values(rtc::KT_RSA, rtc::KT_ECDSA)));
+#endif //UT

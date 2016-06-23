@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #ifdef HAVE_DBUS_GLIB
 
 #include "webrtc/base/dbus.h"
@@ -230,3 +230,4 @@ TEST(DBusSigFilter, BuildFilterString) {
 }  // namespace rtc
 
 #endif  // HAVE_DBUS_GLIB
+#endif // UNIT_TEST

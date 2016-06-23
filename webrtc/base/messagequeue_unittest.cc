@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/messagequeue.h"
 
 #include "webrtc/base/bind.h"
@@ -139,3 +139,4 @@ TEST(MessageQueueManager, Clear) {
   EXPECT_TRUE(deleted);
   EXPECT_FALSE(MessageQueueManager::IsInitialized());
 }
+#endif // UNIT_TEST

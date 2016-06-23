@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/base/socket_unittest.h"
 
 #include "webrtc/base/asyncudpsocket.h"
@@ -1010,3 +1010,4 @@ void SocketTest::GetSetOptionsInternal(const IPAddress& loopback) {
 }
 
 }  // namespace rtc
+#endif //UT

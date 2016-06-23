@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include <iomanip>
 #include <iostream>
 #include <vector>
@@ -387,3 +387,4 @@ TEST(CpuMonitorTest, TestCpuMonitor) {
 }
 
 }  // namespace rtc
+#endif //UT

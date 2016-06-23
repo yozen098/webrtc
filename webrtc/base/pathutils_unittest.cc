@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined (UNIT_TEST)
 #include "webrtc/base/pathutils.h"
 #include "webrtc/base/gunit.h"
 
@@ -46,3 +46,4 @@ TEST(Pathname, ReturnsDotForEmptyPathname) {
   rtc::Pathname path2("c:/foo bar.txt");
   EXPECT_EQ(path2.url(), std::string("file:///c:/foo%20bar.txt"));
 }
+#endif // UNIT_TEST

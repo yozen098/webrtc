@@ -9,7 +9,7 @@
  */
 
 // Borrowed from Chromium's src/base/threading/thread_checker_unittest.cc.
-
+#if defined(UNIT_TEST)
 #include "testing/gtest/include/gtest/gtest.h"
 #include "webrtc/base/checks.h"
 #include "webrtc/base/thread.h"
@@ -197,3 +197,4 @@ TEST(ThreadCheckerTest, DetachFromThreadInRelease) {
 #undef ENABLE_THREAD_CHECKER
 
 }  // namespace rtc
+#endif // UT
