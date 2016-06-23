@@ -9,7 +9,7 @@
  */
 #ifndef WEBRTC_BASE_MACSOCKETSERVER_H__
 #define WEBRTC_BASE_MACSOCKETSERVER_H__
-
+#if defined(WEBRTC_MAC)
 #include <set>
 #if defined(WEBRTC_MAC) && !defined(WEBRTC_IOS) // Invalid on IOS
 #include <Carbon/Carbon.h>
@@ -132,5 +132,5 @@ class MacCarbonAppSocketServer : public MacBaseSocketServer {
 
 #endif
 } // namespace rtc
-
+#endif //WEBRTC_MAC
 #endif  // WEBRTC_BASE_MACSOCKETSERVER_H__

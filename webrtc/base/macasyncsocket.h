@@ -15,7 +15,7 @@
 
 #ifndef WEBRTC_BASE_MACASYNCSOCKET_H__
 #define WEBRTC_BASE_MACASYNCSOCKET_H__
-
+#if defined (WEBRTC_MAC)
 #include <CoreFoundation/CoreFoundation.h>
 
 #include "webrtc/base/asyncsocket.h"
@@ -94,5 +94,5 @@ class MacAsyncSocket : public AsyncSocket, public sigslot::has_slots<> {
 };
 
 }  // namespace rtc
-
+#endif //WEBRTC_MAC
 #endif  // WEBRTC_BASE_MACASYNCSOCKET_H__
