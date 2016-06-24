@@ -1,0 +1,4 @@
+/home/yozen/Work/webrtc-golden/webrtc/talk/webrtc/base/CMakeFiles/base.dir
+/home/yozen/Work/webrtc-golden/webrtc/talk/p2pvideo/CMakeFiles/p2pvideo.dir
+/home/yozen/Work/webrtc-golden/webrtc/talk/p2pvideo/CMakeFiles/p2pvideo_example.dir
+/home/yozen/Work/webrtc-golden/webrtc/talk/talk/app/CMakeFiles/talk_app.dir

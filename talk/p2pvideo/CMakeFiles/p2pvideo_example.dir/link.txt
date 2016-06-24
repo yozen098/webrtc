@@ -1,0 +1,1 @@
+/usr/bin/c++    -fPIC -std=c++11    CMakeFiles/p2pvideo_example.dir/webrtc_streamer.cc.o  -o ../bin/p2pvideo_example -rdynamic ../bin/libp2pvideo.a ../bin/libbase.so ../bin/libtalk_app.a -Wl,-rpath,/home/yozen/Work/webrtc-golden/webrtc/talk/bin 
