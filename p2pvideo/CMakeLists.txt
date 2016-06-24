@@ -24,6 +24,6 @@ add_definitions(
 	-DWEBRTC_LOGGING=1
 )
 add_executable(p2pvideo_example webrtc_streamer.cc)
-target_link_libraries(p2pvideo_example p2pvideo base talk_app)
+target_link_libraries(p2pvideo_example p2pvideo base talk_app talk_media_devices talk_media_base json_app pthread ssl crypto)
 
 
