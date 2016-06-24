@@ -1,2 +1,0 @@
-/usr/bin/ar cr ../bin/libp2pvideo.a  CMakeFiles/p2pvideo.dir/src/defaults.cc.o CMakeFiles/p2pvideo.dir/src/peer_connection_client.cc.o CMakeFiles/p2pvideo.dir/src/conductor.cc.o
-/usr/bin/ranlib ../bin/libp2pvideo.a
