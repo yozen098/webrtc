@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include "talk/media/devices/devicemanager.h"
 
 #ifdef WIN32
@@ -468,3 +468,4 @@ TEST_F(DeviceManagerTestFake, CaptureConstraintsWildcard) {
   EXPECT_TRUE(capturer->GetBestCaptureFormat(kHdFormat, &best_format));
   EXPECT_EQ(kHdFormat, best_format);
 }
+#endif //UT

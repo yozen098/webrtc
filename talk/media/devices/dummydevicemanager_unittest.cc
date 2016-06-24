@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined (UNIT_TEST)
 #include "talk/media/devices/dummydevicemanager.h"
 #include "webrtc/base/gunit.h"
 
@@ -102,3 +102,4 @@ TEST(DummyDeviceManagerTest, VerifyDevicesListsAreCleared) {
     EXPECT_NE(imaginary, video_ins[i].name);
   }
 }
+#endif //UT

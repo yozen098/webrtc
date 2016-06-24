@@ -75,5 +75,4 @@ namespace cricket {
 bool IsWrongLibUDevAbiVersion(rtc::DllHandle libudev_0);
 
 }  // namespace cricket
-
 #endif  // TALK_MEDIA_DEVICES_LIBUDEVSYMBOLTABLE_H_

@@ -30,7 +30,7 @@
 
 #ifndef TALK_MEDIA_DEVICES_CARBONVIDEORENDERER_H_
 #define TALK_MEDIA_DEVICES_CARBONVIDEORENDERER_H_
-
+#if defined (WEBRTC_MAC)
 #include <Carbon/Carbon.h>
 
 #include "talk/media/base/videorenderer.h"
@@ -70,5 +70,5 @@ class CarbonVideoRenderer : public VideoRenderer {
 };
 
 }  // namespace cricket
-
+#endif //WEBRTC_MAC
 #endif  // TALK_MEDIA_DEVICES_CARBONVIDEORENDERER_H_

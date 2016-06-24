@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(WEBRTC_WIN)
 #include "talk/media/devices/win32devicemanager.h"
 
 #include <atlbase.h>
@@ -412,3 +412,4 @@ bool Win32DeviceWatcher::OnMessage(UINT uMsg, WPARAM wParam, LPARAM lParam,
 }
 
 };  // namespace cricket
+#endif // WEBRTC_WIN

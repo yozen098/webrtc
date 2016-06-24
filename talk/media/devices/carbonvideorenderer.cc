@@ -26,7 +26,7 @@
  */
 
 // Implementation of CarbonVideoRenderer
-
+#if defined(WEBRTC_MAC)
 #include "talk/media/devices/carbonvideorenderer.h"
 
 #include "talk/media/base/videocommon.h"
@@ -188,3 +188,4 @@ bool CarbonVideoRenderer::Initialize() {
 }
 
 }  // namespace cricket
+#endif //WEBRTC_MAC

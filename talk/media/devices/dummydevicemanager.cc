@@ -29,7 +29,7 @@
 
 namespace cricket {
 
-const char DeviceManagerInterface::kDefaultDeviceName[] = "";
+//const char DeviceManagerInterface::kDefaultDeviceName[] = "";
 
 DeviceManagerInterface* DeviceManagerFactory::Create() {
   return new DummyDeviceManager();

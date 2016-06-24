@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(UNIT_TEST)
 #include <stdio.h>
 
 #include <string>
@@ -202,3 +202,4 @@ TEST_F(FileVideoCapturerTest, TestFileDevices) {
 }
 
 }  // unnamed namespace
+#endif //UT

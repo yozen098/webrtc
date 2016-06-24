@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#if defined(WEBRTC_MAC)
 #include "talk/media/devices/macdevicemanager.h"
 
 #include <CoreAudio/CoreAudio.h>
@@ -194,3 +194,4 @@ void MacDeviceWatcher::Stop() {
 }
 
 };  // namespace cricket
+#endif //WEBRTC_MAC
