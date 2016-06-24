@@ -10,7 +10,8 @@ webrtc
 
 2. 3rd part lib
 
-* openssl
+* openssl (lib name is libssl.so)and crypto
 * libudev-dev
 * gtk2.0
 * glib-2.0
+* pthread
