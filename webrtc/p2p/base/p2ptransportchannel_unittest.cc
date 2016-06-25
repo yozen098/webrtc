@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/p2p/base/p2ptransportchannel.h"
 #include "webrtc/p2p/base/testrelayserver.h"
 #include "webrtc/p2p/base/teststunserver.h"
@@ -1942,3 +1942,4 @@ TEST_F(P2PTransportChannelPingTest, TestSelectConnectionBasedOnMediaReceived) {
   conn2->OnReadPacket("XYZ", 3, rtc::CreatePacketTime(0));
   EXPECT_EQ(conn3, ch.best_connection());
 }
+#endif //UT

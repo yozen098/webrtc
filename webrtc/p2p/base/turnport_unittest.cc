@@ -7,6 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
+#if defined(UNIT_TEST)
 #if defined(WEBRTC_POSIX)
 #include <dirent.h>
 #endif
@@ -814,3 +815,4 @@ TEST_F(TurnPortTest, TestResolverShutdown) {
   EXPECT_EQ(last_fd_count, GetFDCount());
 }
 #endif
+#endif //UT

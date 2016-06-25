@@ -6,6 +6,7 @@ project(p2p)
 #include_directories(./stunprober)
 include_directories(./../../)
 
-file(GLOB lib_src ./base/candidate.cc)
+file(GLOB lib_src ./base/*.cc)
 
 add_library(p2p STATIC ${lib_src})
+

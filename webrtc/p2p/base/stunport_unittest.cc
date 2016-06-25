@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/p2p/base/basicpacketsocketfactory.h"
 #include "webrtc/p2p/base/stunport.h"
 #include "webrtc/p2p/base/teststunserver.h"
@@ -285,3 +285,4 @@ TEST_F(StunPortTest, TestTwoCandidatesWithTwoStunServersAcrossNat) {
   EXPECT_EQ(port()->Candidates()[0].relay_protocol(), "");
   EXPECT_EQ(port()->Candidates()[1].relay_protocol(), "");
 }
+#endif //UT

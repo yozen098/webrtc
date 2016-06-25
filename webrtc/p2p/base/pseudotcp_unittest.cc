@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include <algorithm>
 #include <vector>
 
@@ -839,3 +839,4 @@ TEST_F(PseudoTcpTest, TestSendWithMismatchedMtus) {
   TestTransfer(1000000);
 }
 */
+#endif //UT

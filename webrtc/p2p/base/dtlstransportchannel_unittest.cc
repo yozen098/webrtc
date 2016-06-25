@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include <set>
 
 #include "webrtc/p2p/base/dtlstransport.h"
@@ -876,3 +876,4 @@ TEST_F(DtlsTransportChannelTest, TestCertificatesAfterConnect) {
   ASSERT_EQ(remote_cert2->ToPEMString(),
             certificate1->ssl_certificate().ToPEMString());
 }
+#endif //UT

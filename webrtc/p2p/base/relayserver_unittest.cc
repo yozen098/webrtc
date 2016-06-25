@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include <string>
 
 #include "webrtc/p2p/base/relayserver.h"
@@ -527,3 +527,4 @@ TEST_F(RelayServerTest, DISABLED_TestExpiration) {
   SendRaw2(msg2, static_cast<int>(strlen(msg2)));
   EXPECT_TRUE(ReceiveRaw1().empty());
 }
+#endif //UT

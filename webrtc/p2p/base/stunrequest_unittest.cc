@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/p2p/base/stunrequest.h"
 #include "webrtc/base/gunit.h"
 #include "webrtc/base/helpers.h"
@@ -201,3 +201,4 @@ TEST_F(StunRequestTest, TestNoEmptyRequest) {
   EXPECT_FALSE(timeout_);
   delete res;
 }
+#endif //UT

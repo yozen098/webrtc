@@ -7,7 +7,7 @@
  *  in the file PATENTS.  All contributing project authors may
  *  be found in the AUTHORS file in the root of the source tree.
  */
-
+#if defined(UNIT_TEST)
 #include "webrtc/p2p/base/basicpacketsocketfactory.h"
 #include "webrtc/p2p/base/relayport.h"
 #include "webrtc/p2p/base/stunport.h"
@@ -2410,3 +2410,4 @@ TEST_F(PortTest, TestControlledTimeout) {
   // The controlled port should be destroyed after 10 milliseconds.
   EXPECT_TRUE_WAIT(destroyed(), kTimeout);
 }
+#endif //UT
