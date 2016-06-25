@@ -35,6 +35,7 @@
 
 #include "webrtc/base/basictypes.h"
 #include "webrtc/base/refcount.h"
+#include "webrtc/p2p/base/candidate.h"
 
 namespace cricket {
 class SessionDescription;

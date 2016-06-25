@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
 
 add_subdirectory(./base)
+add_subdirectory(./p2p)
 #add_subdirectory(./sound)
 #add_subdirectory(./system_wrappers)
 #add_subdirectory(./libjingle)

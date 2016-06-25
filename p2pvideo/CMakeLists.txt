@@ -22,8 +22,9 @@ add_definitions(
 	#-DSSL_USE_NSS
 	-DSSL_USE_SCHANNEL
 	-DWEBRTC_LOGGING=1
-)
+	)
+set(EXT_LIB pthread ssl crypto)
 add_executable(p2pvideo_example webrtc_streamer.cc)
-target_link_libraries(p2pvideo_example p2pvideo base talk_app talk_media_devices talk_media_base json_app pthread ssl crypto)
+target_link_libraries(p2pvideo_example p2pvideo base talk_app talk_media_devices talk_media_base json_app p2p ${EXT_LIB})
 
 

@@ -33,12 +33,7 @@ class Candidate {
  public:
   // TODO: Match the ordering and param list as per RFC 5245
   // candidate-attribute syntax. http://tools.ietf.org/html/rfc5245#section-15.1
-  Candidate()
-      : id_(rtc::CreateRandomString(8)),
-        component_(0),
-        priority_(0),
-        network_type_(rtc::ADAPTER_TYPE_UNKNOWN),
-        generation_(0) {}
+  Candidate();
 
   Candidate(int component,
             const std::string& protocol,
@@ -48,41 +43,26 @@ class Candidate {
             const std::string& password,
             const std::string& type,
             uint32 generation,
-            const std::string& foundation)
-      : id_(rtc::CreateRandomString(8)),
-        component_(component),
-        protocol_(protocol),
-        address_(address),
-        priority_(priority),
-        username_(username),
-        password_(password),
-        type_(type),
-        network_type_(rtc::ADAPTER_TYPE_UNKNOWN),
-        generation_(generation),
-        foundation_(foundation) {}
+            const std::string& foundation);
 
-  const std::string & id() const { return id_; }
-  void set_id(const std::string & id) { id_ = id; }
+  const std::string & id() const;
+  void set_id(const std::string & id);
 
-  int component() const { return component_; }
-  void set_component(int component) { component_ = component; }
+  int component() const;
+  void set_component(int component);
 
-  const std::string & protocol() const { return protocol_; }
-  void set_protocol(const std::string & protocol) { protocol_ = protocol; }
+  const std::string & protocol() const;
+  void set_protocol(const std::string & protocol);
 
   // The protocol used to talk to relay.
-  const std::string& relay_protocol() const { return relay_protocol_; }
-  void set_relay_protocol(const std::string& protocol) {
-    relay_protocol_ = protocol;
-  }
+  const std::string& relay_protocol() const;
+  void set_relay_protocol(const std::string& protocol);
 
-  const rtc::SocketAddress & address() const { return address_; }
-  void set_address(const rtc::SocketAddress & address) {
-    address_ = address;
-  }
+  const rtc::SocketAddress & address() const;
+  void set_address(const rtc::SocketAddress & address);
 
-  uint32 priority() const { return priority_; }
-  void set_priority(const uint32 priority) { priority_ = priority; }
+  uint32 priority() const;
+  void set_priority(const uint32 priority);
 
   // TODO(pthatcher): Remove once Chromium's jingle/glue/utils.cc
   // doesn't use it.
@@ -90,96 +70,62 @@ class Candidate {
   // is 0-2^32-1) to to match RFC 5245, section 4.1.2.1.  Also see
   // https://docs.google.com/a/google.com/document/d/
   // 1iNQDiwDKMh0NQOrCqbj3DKKRT0Dn5_5UJYhmZO-t7Uc/edit
-  float preference() const {
+  float preference() const;
     // The preference value is clamped to two decimal precision.
-    return static_cast<float>(((priority_ >> 24) * 100 / 127) / 100.0);
-  }
+
 
   // TODO(pthatcher): Remove once Chromium's jingle/glue/utils.cc
   // doesn't use it.
-  void set_preference(float preference) {
+  void set_preference(float preference);
     // Limiting priority to UINT_MAX when value exceeds uint32 max.
     // This can happen for e.g. when preference = 3.
-    uint64 prio_val = static_cast<uint64>(preference * 127) << 24;
-    priority_ =
-        static_cast<uint32>(std::min(prio_val, static_cast<uint64>(UINT_MAX)));
-  }
 
-  const std::string & username() const { return username_; }
-  void set_username(const std::string & username) { username_ = username; }
 
-  const std::string & password() const { return password_; }
-  void set_password(const std::string & password) { password_ = password; }
+  const std::string & username() const;
+  void set_username(const std::string & username);
 
-  const std::string & type() const { return type_; }
-  void set_type(const std::string & type) { type_ = type; }
+  const std::string & password() const;
+  void set_password(const std::string & password);
 
-  const std::string & network_name() const { return network_name_; }
-  void set_network_name(const std::string & network_name) {
-    network_name_ = network_name;
-  }
+  const std::string & type() const;
+  void set_type(const std::string & type);
 
-  rtc::AdapterType network_type() const { return network_type_; }
-  void set_network_type(rtc::AdapterType network_type) {
-    network_type_ = network_type;
-  }
+  const std::string & network_name() const;
+  void set_network_name(const std::string & network_name);
+
+  rtc::AdapterType network_type() const;
+  void set_network_type(rtc::AdapterType network_type);
 
   // Candidates in a new generation replace those in the old generation.
-  uint32 generation() const { return generation_; }
-  void set_generation(uint32 generation) { generation_ = generation; }
-  const std::string generation_str() const {
-    std::ostringstream ost;
-    ost << generation_;
-    return ost.str();
-  }
-  void set_generation_str(const std::string& str) {
-    std::istringstream ist(str);
-    ist >> generation_;
-  }
+  uint32 generation() const;
+  void set_generation(uint32 generation);
+  const std::string generation_str() const;
+  void set_generation_str(const std::string& str);
 
-  const std::string& foundation() const {
-    return foundation_;
-  }
+  const std::string& foundation() const;
 
-  void set_foundation(const std::string& foundation) {
-    foundation_ = foundation;
-  }
+  void set_foundation(const std::string& foundation);
 
-  const rtc::SocketAddress & related_address() const {
-    return related_address_;
-  }
+  const rtc::SocketAddress & related_address() const;
   void set_related_address(
-      const rtc::SocketAddress & related_address) {
-    related_address_ = related_address;
-  }
-  const std::string& tcptype() const { return tcptype_; }
-  void set_tcptype(const std::string& tcptype){
-    tcptype_ = tcptype;
-  }
+    const rtc::SocketAddress & related_address);
+  const std::string& tcptype() const;
+  void set_tcptype(const std::string& tcptype);
 
   // Determines whether this candidate is equivalent to the given one.
-  bool IsEquivalent(const Candidate& c) const {
+  bool IsEquivalent(const Candidate& c) const;
     // We ignore the network name, since that is just debug information, and
     // the priority, since that should be the same if the rest is (and it's
     // a float so equality checking is always worrisome).
-    return (component_ == c.component_) && (protocol_ == c.protocol_) &&
-           (address_ == c.address_) && (username_ == c.username_) &&
-           (password_ == c.password_) && (type_ == c.type_) &&
-           (generation_ == c.generation_) && (foundation_ == c.foundation_) &&
-           (related_address_ == c.related_address_);
-  }
 
-  std::string ToString() const {
-    return ToStringInternal(false);
-  }
 
-  std::string ToSensitiveString() const {
-    return ToStringInternal(true);
-  }
+  std::string ToString() const;
+
+  std::string ToSensitiveString() const;
 
   uint32 GetPriority(uint32 type_preference,
                      int network_adapter_preference,
-                     int relay_preference) const {
+                     int relay_preference) const;
     // RFC 5245 - 4.1.2.1.
     // priority = (2^24)*(type preference) +
     //            (2^8)*(local preference) +
@@ -196,26 +142,10 @@ class Candidate {
     // Addr Pref - Address preference value as per RFC 3484.
     // local preference =  (NIC Type << 8 | Addr_Pref) - relay preference.
 
-    int addr_pref = IPAddressPrecedence(address_.ipaddr());
-    int local_preference = ((network_adapter_preference << 8) | addr_pref) +
-        relay_preference;
 
-    return (type_preference << 24) |
-           (local_preference << 8) |
-           (256 - component_);
-  }
 
  private:
-  std::string ToStringInternal(bool sensitive) const {
-    std::ostringstream ost;
-    std::string address = sensitive ? address_.ToSensitiveString() :
-                                      address_.ToString();
-    ost << "Cand[" << foundation_ << ":" << component_ << ":"
-        << protocol_ << ":" << priority_ << ":"
-        << address << ":" << type_ << ":" << related_address_ << ":"
-        << username_ << ":" << password_ << "]";
-    return ost.str();
-  }
+  std::string ToStringInternal(bool sensitive) const;
 
   std::string id_;
   int component_;
